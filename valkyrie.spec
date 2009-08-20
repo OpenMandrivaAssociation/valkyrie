@@ -9,6 +9,7 @@ Source0: http://valgrind.org/downloads/valkyrie-1.4.0.tar.bz2
 Patch0: valkyrie-1.4.0-qt3-build.patch
 BuildRequires: qt3-devel
 BuildRequires: valgrind
+Requires: valgrind
 BuildRoot: %{_tmppath}/{%name}-buildroot
 
 %description
