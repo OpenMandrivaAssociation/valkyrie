@@ -1,0 +1,35 @@
+--- valkyrie-2.0.0/src/help/help_about.cpp.orig	2011-11-26 06:45:25.186113597 -0200
++++ valkyrie-2.0.0/src/help/help_about.cpp	2011-11-26 06:52:43.259779793 -0200
+@@ -106,8 +106,8 @@ HelpAbout::HelpAbout( QWidget* parent, H
+    vbox->addWidget( okButt, 0, Qt::AlignRight );
+    
+    // setup text-browsers
+-   license->setSource( VkCfg::docDir() + "/about_gpl.html" );
+-   support->setSource( VkCfg::docDir() + "/support.html" );
++   license->setSource( "file://" + VkCfg::docDir() + "/about_gpl.html" );
++   support->setSource( "file://" + VkCfg::docDir() + "/support.html" );
+    // about_vk source needs version args updating:
+    QFile file( VkCfg::docDir() + "/about_vk.html" );
+    
+--- valkyrie-2.0.0/src/help/help_handbook.cpp.orig	2011-11-26 06:45:25.185113593 -0200
++++ valkyrie-2.0.0/src/help/help_handbook.cpp	2011-11-26 06:45:35.984154549 -0200
+@@ -88,7 +88,7 @@ HandBook::HandBook( QWidget* parent ) //
+             
+             
+    // default startup is with the index page loaded
+-   QString home = VkCfg::docDir() + "/index.html";
++   QString home = "file://" + VkCfg::docDir() + "/index.html";
+    browser->setSource( home );
+    
+    //TODO: vkErrors?  hmm. in a constructor...
+--- valkyrie-2.0.0/vk_config.pri.orig	2011-11-26 06:44:30.651906862 -0200
++++ valkyrie-2.0.0/vk_config.pri	2011-11-26 06:45:00.196018842 -0200
+@@ -25,7 +25,7 @@ isEmpty(DATADIR) {
+ ######################################################################
+ # Install paths relative to $$PREFIX:
+ target.path    = $$BINDIR
+-doc.path       = $$DATADIR/$$PACKAGE/doc
++doc.path       = /usr/share/doc/valkyrie
+ doc_imgs.path  = $$DATADIR/$$PACKAGE/doc/images
+ 
+ ######################################################################

@@ -1,0 +1,11 @@
+--- valkyrie-2.0.0/src/objects/valkyrie_object.cpp.orig	2011-11-26 07:05:19.744677755 -0200
++++ valkyrie-2.0.0/src/objects/valkyrie_object.cpp	2011-11-26 07:06:39.654985250 -0200
+@@ -485,7 +485,7 @@ int Valkyrie::checkOptArg( int optid, QS
+                // editor flag, plus our replacement string (%n)
+                QFileInfo fi( argval );
+                QString fname = fi.fileName();
+-               if ( fname.contains( QRegExp( "^(emacs|gedit|gvim|nano|nedit)[\\W]*" ) ) ) {
++               if ( fname.contains( QRegExp( "^(emacs|gedit|gvim|nano|nedit|xedit)[\\W]*" ) ) ) {
+                   argval += " +%n";
+                }
+                else if ( fname.contains( QRegExp( "^kate[\\W]*" ) ) ) {
