@@ -4,7 +4,7 @@ Release:	2
 Summary:	Qt4-based GUI for the Memcheck and Helgrind Valgrind tools
 License: 	GPLv2+
 Group: 		Development/Other
-URL: 		http://valgrind.org/
+URL: 		https://valgrind.org/
 # a411dfb803f548dae5f988de0160aeb5
 Source0:	http://www.valgrind.org/downloads/%{name}-%{version}.tar.bz2
 
