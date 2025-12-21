@@ -8,6 +8,7 @@ URL: 		https://valgrind.org/
 # a411dfb803f548dae5f988de0160aeb5
 Source0:	http://www.valgrind.org/downloads/%{name}-%{version}.tar.bz2
 
+BuildRequires:	make
 BuildRequires:	qt4-devel
 
 Patch0:		valkyrie-2.0.0-doc-path.patch
